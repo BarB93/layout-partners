@@ -1,0 +1,189 @@
+@import "reset";
+@import "variables";
+
+.container {
+  width: 100%;
+  max-width: calc(1170px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.header {
+  position: relative;
+  margin: 0 0 70px 0;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+  
+  @media screen and (max-width: $tablet + px) {
+      box-shadow: none;
+  }
+
+  &__logo {
+    width: 40px;
+    height: 40px;
+    margin: 0 40px 0 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    flex: 1 1 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+
+    @media screen and (max-width: $tablet + px) {
+      padding: 17px 0 16px 0;
+    }
+  }
+
+  &__right {
+    flex: 1 0 auto;
+    padding: 20px 0 20px 20px;
+    border-left: 1px solid $separator-common;
+
+    @media screen and (max-width: $tablet + px) {
+      display: flex;
+      align-items: flex-end;
+      border: none;
+      padding: 17px 0 16px 0;
+    }
+  }
+
+  &__search {
+    flex: 1 1 100%;
+    margin: 0 40px 0 0;
+
+    @media screen and (max-width: $tablet + px) {
+      display: none;
+    }
+  }
+
+  &__personal {
+
+  }
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.search {
+  &__container {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top:8px;
+    left: 10px;
+
+    width: 24px;
+    height: 24px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 11px 14px 11px 39px;
+    background: #FFFFFF;
+
+    border: 1px solid $separator-common;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    &:focus {
+      outline: none;
+
+      &::placeholder {
+        opacity: .4;
+      }
+    }
+
+    &::placeholder {
+      color: $gray-middle;
+    }
+  }
+}
+
+.searchMobile {
+  display: none;
+  background: #FFFFFF;
+  border-top: 1px solid rgba($gray-middle, 0.5);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+
+  &__label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px 1px 47px;
+    cursor: text;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 20px;
+    top: 8px;
+    margin: 0 5px 0 0;
+  }
+
+  &__input {
+    width: 100%;
+    border: none;
+
+    &:focus {
+      outline: none;
+
+      &::placeholder {
+       opacity: .4;
+      }
+    }
+
+    &::placeholder {
+      color: $gray-middle;
+    }
+  }
+
+
+  @media screen and (max-width: $tablet + px) {
+    display: block;
+  }
+}
+
+.personal {
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: $tablet + px){
+    display: none;
+  }
+
+  &__name {
+    color: #768298;
+    cursor: pointer;
+    margin: 0 12px 0 0;
+  }
+
+  &__avatar {
+    height: 40px;
+    width: 40px;
+    margin: 0;
+    cursor: pointer;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.personalIcon {
+  display: none;
+
+  @media screen and (max-width: $tablet + px) {
+    display: block;
+  }
+}
