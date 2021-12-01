@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const PartnerItem = ({imageURL}) => {
     return (
         <li className='partners__item'>
